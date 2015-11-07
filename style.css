@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Roboto-Regular'; /* Гарнитура шрифта */
+    src: url(../fonts/RobotoRegular.ttf); /* Путь к файлу со шрифтом */
+   }
+
+body {
+	background-color: #0a0a0a;
+	background-size: 100%;
+	margin: 0;
+}
+.title {
+	font: 34px 'PT Sans Narrow', sans-serif;
+	font-weight: 900;
+	color: #ffffff;
+	margin: 0;
+	margin-bottom: 20px;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+.center-content{
+	max-width: 300px;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+#submitTask {
+	padding: 7px 10px;
+	background: #70162b;
+	outline: none;
+	font: 16px 'PT Sans Narrow', sans-serif;
+	color: #fff;
+	transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    user-select: none;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    margin-top: 10px;
+}
+#editAdd {
+	padding: 7px;
+	padding-top: 11px;
+	background: #e2e2e2;
+	outline: none;
+	border: none;
+
+}
+#submitTask:active {
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+   
+}
+.bg {
+	padding: 0;
+ 	max-width: 100%;
+	background: url('img/bg.jpg') no-repeat;
+	height: 300px;
+	border-bottom: 10px solid #1a1a1a;
+}
+ul {
+	padding: 0;
+	width: 100%;
+	list-style: none;
+	margin: 0 auto;
+}
+li {
+	font: 16px 'PT Sans Narrow', sans-serif;
+	color: white;
+	border-bottom: 1px solid  #686868;
+	padding-bottom: 5px;
+	width: 78%;
+	margin: 0 auto;
+	z-index: 3;
+	position: relative;
+	margin-top: 15px;
+
+}
+.tasks {
+	position: relative;
+}
+#addTask {
+	position: relative;
+	text-align: center;
+	z-index: 1000;
+}
+
+.black-bg {
+	position: absolute;
+	background: #161010;
+	opacity: 0.5;
+	width: 300px;
+	height: 300px;
+	z-index: 1;
+	margin: 0 auto;
+	box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+
+}
+button {
+	padding: 0;
+}
+.edit,
+.delete {
+	width: 16px;
+	height: 16px;
+	border: none;
+	position: absolute;
+	top: 6px;
+	outline: none;
+
+
+}
+.edit {
+	background: url('img/glyphicons.png') no-repeat;
+	background-size: 90%;
+	left: 190px;
+}
+.delete {
+	background: url('img/glyphicons.png') no-repeat;
+	background-position: 0 -38px;
+	background-size: 90%;
+	left: 210px;
+
+}
+.nameTask {
+	width: 190px;
+	display: block;
+	white-space: normal;
+}
+.arrow {
+	width: 17px;
+	height: 20px;
+	background: url('img/arrow.png');
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	cursor: pointer;
+}
+.created {
+	font: 36px 'PT Sans Narrow', sans-serif;
+	color: white;
+	position: absolute;
+	bottom: -10%;
+	left: 41%;
+}
+.link {
+	text-decoration: none;
+	color: #c8a7ff;
+}	

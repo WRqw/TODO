@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>backbone</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="bg">
+	<div class="center-content">
+	<div class="black-bg"></div>
+	<h1 class="title">Your tasks:</h1>
+	<form action="" id="addTask">
+		<input type="text" id="editAdd" placeholder="Enter task name">
+		<input type="submit" id="submitTask" value="Add task">
+	</form>	
+
+	
+	<div class="tasks">
+		<script type="text/template" id='taskTemplate'>
+			<span class="nameTask"><%= title %></span>
+			<button class="edit"></button>
+			<button class="delete"></button>
+		</script>
+	</div>
+	</div>
+	</div>
+	<div class="arrow"></div>
+	<h1 class="created">Created by <a href="#" class="link">WRQQQWQ</a></h1>
+	
+	<script type="text/javascript" src = 'js/jquery-2.1.4.js'></script>
+	<script type="text/javascript" src = 'js/underscore.js'></script>
+	<script type="text/javascript" src = 'js/backbone.js'></script>
+	<script type="text/javascript" src = 'js/main.js'></script>
+</body>
+
+</html>
