@@ -1,4 +1,4 @@
-@font-face {
+@font {
     font-family: 'Roboto-Regular'; /* Гарнитура шрифта */
     src: url(../fonts/RobotoRegular.ttf); /* Путь к файлу со шрифтом */
    }
@@ -7,6 +7,10 @@ body {
 	background-color: #0a0a0a;
 	background-size: 100%;
 	margin: 0;
+	-webkit-transition: 1s ease-out 0.5s;
+     -moz-transition: 1s ease-out 0.5s;
+     -o-transition: 1s ease-out 0.5s;
+     transition: 1s ease-out 0.5s;
 }
 .title {
 	font: 34px 'PT Sans Narrow', sans-serif;
@@ -22,6 +26,11 @@ body {
 	max-width: 300px;
 	margin: 0 auto;
 	vertical-align: middle;
+	 -webkit-transition: opacity 0,3s ease-in-out;
+  -moz-transition: opacity 0,3s ease-in-out;
+  -ms-transition: opacity 0,3s ease-in-out;
+  -o-transition: opacity 0,3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 #submitTask {
 	padding: 7px 10px;
@@ -126,23 +135,68 @@ button {
 	display: block;
 	white-space: normal;
 }
-.arrow {
+.arrow-down {
 	width: 17px;
 	height: 20px;
 	background: url('img/arrow.png');
 	position: absolute;
 	bottom: 3%;
-	left: 50%;
+	left: 49%;
+	cursor: pointer;
+}
+.arrow-back {
+	width: 17px;
+	height: 20px;
+	background: url('img/arrow.png');
+
+	transform: rotate(180deg);
+	position: absolute;
+	top: 116%;
+	left: 54%;
+	display: none;
 	cursor: pointer;
 }
 .created {
-	font: 36px 'PT Sans Narrow', sans-serif;
+	font: 66px 'Oswald', sans-serif;
 	color: white;
 	position: absolute;
-	bottom: -10%;
-	left: 41%;
+	bottom: 10%;
+	left: 31%;
+	display: none;
+	-webkit-transition: opacity 0,3s ease-in-out;
+ 	-moz-transition: opacity 0,3s ease-in-out;
+    -ms-transition: opacity 0,3s ease-in-out;
+    -o-transition: opacity 0,3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 .link {
 	text-decoration: none;
 	color: #c8a7ff;
 }	
+.hidden {  
+	display: none;
+}  
+.visuallyhidden{
+	zoom: 1;
+  	filter: alpha(opacity=50);
+ 	opacity: 0;
+}
+.back {
+	position: relative;
+	top: 90%;
+	left: 45%;
+	font: 19px 'PT Sans Narrow', sans-serif;
+	color: #ffc2cd;
+	display: none;
+	cursor: pointer;
+	width: 180px;
+
+}
+.created_by {
+	font: 67px 'Oswald', sans-serif;
+	font-weight: 300;
+	margin-right: 10px;
+}
+
+
+ 

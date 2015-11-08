@@ -110,13 +110,102 @@ $(function() {
 
 	var newAddTask = new App.Views.AddTask({collection: tasksCollection});
 
-	$( ".arrow" ).click(function() {
+	$( ".arrow-down" ).click(function() {
+		var height=$("body").height(); 
+		 $("body").animate({"scrollTop":height}, 600);
+		});
+
+	$( ".back").click(function() {
+		var height=$("body").height(); 
+		 $("body").animate({"scrollTop":0}, 600);
+	})
+
+	/*$( ".arrow" ).click(function() {
  		 $( ".center-content" ).hide( "fast");
  		 var g = $(".bg").css('height', '1000px');
  		 var height=$("body").height(); 
 		 $("body").animate({"scrollTop":height},"slow"); 
 		 $(".arrow").hide();
-		});
+		});*/
+	var elem = document.querySelector('.arrow-down');
+
+	var elem2 = document.querySelector('.center-content');
+
+	var bgElem = document.querySelector('.bg');
+
+	var arrow = document.querySelector('.arrow-down');
+
+	var spanBack = document.querySelector('.back');
+
+	var creater = document.querySelector('.created');
+
+	var animated = document.querySelector('.animated');
+	
+
+
+
+
+	elem.addEventListener('click', scrollDown);
+
+	elem.addEventListener('click', hideArrow);
+
+	elem.addEventListener('click', showArrow);
+
+	spanBack.addEventListener('click', showPanel);
+
+
+
+
+	function scrollDown() {
+
+
+		elem2.classList.add('visuallyhidden');
+
+		bgElem.style.height = '1000px';
+
+		creater.style.display = 'block';
+
+		animated.classList.add('bounceInLeft');
+    		
+
+
+
+
+
+    };
+
+    function hideArrow () {
+  
+
+    	arrow.style.display = 'none';
+    };
+    function showArrow () {
+
+
+    	if (arrow.style.display = 'none') {
+    		spanBack.style.display = 'block';
+
+    	}
+    };
+    function showPanel() {
+    	elem2.classList.remove('visuallyhidden');
+    	bgElem.style.height = '300px';
+    	spanBack.style.display = 'none';
+    	arrow.style.display = 'block';
+    	creater.style.display = 'none';
+
+    	bounceInLeft
+
+
+
+    }
+
+    
+	
+	
+
+
+
 
 	$('.tasks').html(tasksView.render().el);
 
@@ -136,4 +225,4 @@ $(function() {
 
 
 
-})
+});
