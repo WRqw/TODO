@@ -218,13 +218,15 @@ button {
 }
 .back {
 	position: relative;
-	top: 90%;
+	top: 61%;
+	line-height: 0,5;
 	left: 45%;
-	font: 19px 'PT Sans Narrow', sans-serif;
+	font: 18px 'PT Sans Narrow', sans-serif;
 	color: #ffc2cd;
 	display: none;
 	cursor: pointer;
 	width: 180px;
+	vertical-align: bottom;
 
 }
 .created_by {

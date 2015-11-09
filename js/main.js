@@ -49,7 +49,8 @@ $(function() {
 		events: {
 			'click .nameTask' : 'editTask',
 			'click .delete' : 'destroy',
-			'click .edit' : 'completedTask'
+			'click .edit' : 'completedTask',
+			'click .pseudoelement' : 'editCompletedTask'
 
 		},
 		editTask: function() {
@@ -61,15 +62,16 @@ $(function() {
 		},
 
 		completedTask: function() {
-			$('div.tasks').on('click', '.edit', function(e) {
- 			$(this.$el).removeClass('nameTask').addClass('pseudoelement');
- 	
- 			e.preventDefault();
 
-		});
+ 			this.$('span').removeClass('nameTask').addClass('pseudoelement');
+ 		},
+ 		editCompletedTask: function() {
+ 			var newAdd = prompt('Введите имя задачи');
+			this.model.set('title', newAdd, {validate: true});
+			this.$('span').removeClass('nameTask').addClass('pseudoelement');
 
-		
- }
+
+ 		}
 		
 	});
 
