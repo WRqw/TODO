@@ -50,6 +50,7 @@ $(function() {
 			'click .nameTask' : 'editTask',
 			'click .delete' : 'destroy',
 			'click .edit' : 'completedTask'
+
 		},
 		editTask: function() {
 			var newAdd = prompt('Введите имя задачи');
@@ -57,7 +58,18 @@ $(function() {
 		},
 		destroy: function() {
 			this.model.destroy();
-		}
+		},
+
+		completedTask: function() {
+			$('div.tasks').on('click', '.edit', function(e) {
+ 			$(this.$el).removeClass('nameTask').addClass('pseudoelement');
+ 	
+ 			e.preventDefault();
+
+		});
+
+		
+ }
 		
 	});
 
@@ -201,10 +213,7 @@ $(function() {
 
     };
 
- $('div.tasks').on('click', '.edit', function(e) {
- 	$('span').removeClass('nameTask').addClass('pseudoelement');
- 	e.preventDefault();
- });   
+
 
 
     
