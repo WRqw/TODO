@@ -12,15 +12,15 @@ $(function() {
 
 	App.Models.Task = Backbone.Model.extend({
 		defaults: {
-			title: ''
+			title: '',
+			completed: false
 		},
 		validate: function (attrs) {
 			if ( ! $.trim(attrs.title) ) {
 				return 'Не корректное имя задачи. Попробуйте еще раз.'
-			}
-			
 		}
-	});
+	}
+});
 
 
 	App.Collections.Tasks = Backbone.Collection.extend({
@@ -47,8 +47,9 @@ $(function() {
 			return this;
 		},
 		events: {
-			'click .edit' : 'editTask',
-			'click .delete' : 'destroy'
+			'click .nameTask' : 'editTask',
+			'click .delete' : 'destroy',
+			'click .edit' : 'completedTask'
 		},
 		editTask: function() {
 			var newAdd = prompt('Введите имя задачи');
@@ -140,6 +141,7 @@ $(function() {
 	var creater = document.querySelector('.created');
 
 	var animated = document.querySelector('.animated');
+
 	
 
 
@@ -153,6 +155,9 @@ $(function() {
 
 	spanBack.addEventListener('click', showPanel);
 
+	
+
+	
 
 
 
@@ -194,11 +199,13 @@ $(function() {
     	arrow.style.display = 'block';
     	creater.style.display = 'none';
 
-    	bounceInLeft
+    };
 
+ $('div.tasks').on('click', '.edit', function(e) {
+ 	$('span').removeClass('nameTask').addClass('pseudoelement');
+ 	e.preventDefault();
+ });   
 
-
-    }
 
     
 	
