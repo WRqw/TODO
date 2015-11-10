@@ -113,6 +113,10 @@ $(function() {
 
 			this.collection.add(newTask);
 
+			var resetButton = document.querySelector('.reset');
+
+			resetButton.classList.add('resetgrey');
+
 
 		},
 
@@ -214,6 +218,13 @@ $(function() {
     	creater.style.display = 'none';
 
     };
+
+    $(".reset").click(function () {
+      $("li").remove();
+      	var resetButton = document.querySelector('.reset');
+
+		resetButton.classList.remove('resetgrey');
+    });
 
 
 

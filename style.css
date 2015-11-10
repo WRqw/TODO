@@ -234,6 +234,24 @@ button {
 	font-weight: 300;
 	margin-right: 10px;
 }
+.reset {
+ 	width: 24px;
+ 	height: 26px;
+ 	margin: 0 auto;
+ 	margin-top: 40px;
+ 	display: block;
+ 	background: url('img/reset.png');
+ 	border: none;
+ 	outline: none;
+ 	color: grey;
+ 	opacity: 0.3;
+ 	transition: all 0.5s ease;
+}
+.resetgrey {
+	color: white;
+	cursor: pointer;
+	opacity: 1;
+} 
 
 
 
